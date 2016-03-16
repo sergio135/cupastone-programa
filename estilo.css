@@ -78,6 +78,9 @@
             background-color: #d8d8d8;
             color: #888888;
         }
+        .boton-box-active {
+            background-color: #a3527b;
+        }
 
 
         .area-group-select {
