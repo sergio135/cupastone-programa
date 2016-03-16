@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Sergio Garcia Garcia">
+    <!--
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <title>Cupa Stone Nantes</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+
+        }
+
+        /* Cabecera */
+        header {
+            display: block;
+            width: 100%;
+            height: 15px;
+            background-color: #6C1D45;
+            color: #ffffff;
+            padding: 10px;
+        }
+        .area-logo {
+            margin-bottom: 10px;
+        }
+        .logo {
+            width: 50%;
+        }
+
+        /* Cuerpo */
+        main {
+            margin-top: 10px;
+            padding: 0px 10px;
+        }
+        #notify {
+            margin-bottom: 10px;
+            display: none;
+        }
+        .alert {
+            padding: 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .log {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+
+
+        .instruction {
+            text-align: center;
+            font-size: 16px;
+            color: #888888;
+            margin-bottom: 5px;
+        }
+        .area-group-box {
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .area-box {
+            display: block;
+            float: left;
+            width: 50%;
+        }
+        .boton-box {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #6C1D45;
+            text-align: center;
+            padding: 20px 5px;
+            text-decoration: none;
+            font-size: 13px;
+            color: #ffffff;
+            text-transform: uppercase;
+            transition-duration: 0.5s;
+        }
+        .boton-box:hover {
+            background-color: #a3527b;
+        }
+        .boton-box:disabled {
+            background-color: #d8d8d8;
+            color: #888888;
+        }
+
+
+        .area-group-select {
+            overflow: hidden;
+        }
+        .select-box {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            padding: 5px 5px;
+        }
+
+
+        /* Foooter */
+        footer {
+            display: block;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 9px;
+        }
+        .area-send {
+            padding: 0px 10px;
+        }
+        .aviso-legal {
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div class="area-logo">
+            <img src="logo.png" class="logo">
+        </div>
+        <!-- Notificacion -->
+        <div id="notify">
+            <div class="alert log">
+                <p>Esto es una notificacion</p>
+            </div>
+        </div>
+
+        <!-- Paso 1 -->
+        <div class="instruction">
+            Selecciona una primera opcion...
+        </div>
+        <div class="area-group-box">
+            <div class="area-box">
+                <input type="button" name="boton1" class="boton-box" value="pro">
+            </div>
+            <div class="area-box">
+                <input type="button" name="boton2" class="boton-box" value="partculier">
+            </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="instruction">
+            ahora la 2º opcion...
+        </div>
+        <div class="area-group-box">
+            <div class="area-box">
+                <input type="button" id="boton3" class="boton-box" value="nouveau">
+            </div>
+            <div class="area-box">
+                <input type="button" name="boton4" class="boton-box" value="cliente habituel">
+            </div>
+        </div>
+
+
+        <!-- Paso 3 -->
+
+        <div class="area-group-select">
+            <div class="area-box">
+                <div class="instruction">
+                    Seleciona una opcion...
+                </div>
+                <select class="select-box" disabled>
+                    <option>Bouche á oreille</option>
+                    <option>Salon</option>
+                    <option>Pub Journal/magazine</option>
+                </select>
+            </div>
+            <div class="area-box">
+                <div class="instruction">
+                    Seleciona una opcion...
+                </div>
+                <select class="select-box" disabled>
+                    <option>Bouche á oreille</option>
+                    <option>Salon</option>
+                    <option>Pub Journal/magazine</option>
+                </select>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- Enviar -->
+        <div class="area-send">
+            <input type="button" class="boton-box" value="envoyer" id="enviar">
+        </div>
+        <div class="aviso-legal">
+            CUPA STONE NANTES 2015 ® TOUS DROITS RÉSERVÉS
+        </div>
+    </footer>
+
+</body>
+</html>
