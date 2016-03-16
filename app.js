@@ -9,6 +9,11 @@ $(window).load(function () {
     var boton4 = false;
     actualizar();
 
+    $('.btn-select').on('click', function () {
+
+        click();
+    });
+
     $('#enviar').click(function () {
 
         $(undefined).attr('disabled', 'disabled');
@@ -16,6 +21,11 @@ $(window).load(function () {
 
         actualizar();
     });
+
+    function click() {
+        alert('asas');
+        $(this).attr('disabled', 'disabled');
+    }
 
     function actualizar() {
         if (boton1) {

@@ -1,11 +1,16 @@
 $(window).load(() => {
 
-    var boton1 = true;
-    var boton2 = true;
-    var boton3 = false;
-    var boton4 = false;
+    let boton1 = true;
+    let boton2 = true;
+    let boton3 = false;
+    let boton4 = false;
     actualizar();
 
+    $('.btn-select').on('click',() => {
+
+        click();
+
+    })
 
 
     $('#enviar').click(() => {
@@ -19,7 +24,10 @@ $(window).load(() => {
 
 
 
-
+    function click () {
+        alert('as');
+        $(this).attr('disabled','disabled');
+    }
 
 
 
