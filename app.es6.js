@@ -1,8 +1,3 @@
-const nw = require('nw.gui');
-const win = nw.Window.get();
-const new_win = nw.Window.open;
-const menu = new nw.Menu();
-
 $(window).load(() => {
 
     var boton1 = true;
@@ -15,12 +10,15 @@ $(window).load(() => {
 
     $('#enviar').click(() => {
 
-
         $(this).attr('disabled','disabled');
         boton3 = false;
 
         actualizar();
     });
+
+
+
+
 
 
 
