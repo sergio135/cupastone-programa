@@ -1,5 +1,6 @@
 'use strict';
 var result;
+var agencia = 'Nantes';
 var boton = [];
 boton[0]= { active: true, click: false, value: "pro" };
 boton[1]= { active: true, click: false, value: "partculier" };
@@ -61,7 +62,7 @@ $(window).load(function () {
                 temp = temp.concat(i.value);
                 }
             }
-            result = temp;
+            result = [agencia, temp];
             alert(result);
             location.reload();
         } else {
