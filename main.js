@@ -12,7 +12,7 @@ let ventana;
 
 function createWindow () {
   // Create the browser window.
-  ventana = new BrowserWindow({width: 400, height: 600});
+  ventana = new BrowserWindow({width: 450, height: 600});
 
   // and load the index.html of the app.
   ventana.loadURL('file://' + __dirname + '/index.html');

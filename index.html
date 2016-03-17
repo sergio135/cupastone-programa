@@ -4,11 +4,9 @@
     <meta charset="utf-8">
     <meta name="author" content="Sergio Garcia Garcia">
     <link rel="stylesheet" href="estilo.css">
-    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+
     <title>Cupa Stone Nantes</title>
     <script>
-        /*
         window.nodeRequire = require;
         delete window.require;
         delete window.exports;
@@ -17,9 +15,10 @@
 </head>
 <body>
 
-    <header>
 
+    <header>
     </header>
+
 
     <main>
         <div class="area-logo">
@@ -65,35 +64,54 @@
                 <div class="instruction">
                     Seleciona una opcion...
                 </div>
-                <select class="select-box" disabled>
+                <select class="select-box" id="boton5">
+                    <option>select..</option>
                     <option>Bouche á oreille</option>
                     <option>Salon</option>
                     <option>Pub Journal/magazine</option>
+                    <option>Pub radio</option>
+                    <option>Affichage dans la rue</option>
+                    <option>Pub TV</option>
+                    <option>Internet/Web</option>
+                    <option>Promo courrier</option>
+                    <option>Promo email</option>
+                    <option>Presse</option>
+                    <option>Visite spontanée</option>
+                    <option>Recommandation PRO</option>
                 </select>
             </div>
             <div class="area-box">
                 <div class="instruction">
                     Seleciona una opcion...
                 </div>
-                <select class="select-box" disabled>
-                    <option>Bouche á oreille</option>
-                    <option>Salon</option>
-                    <option>Pub Journal/magazine</option>
+                <select class="select-box" id="boton6">
+                    <option>select..</option>
+                    <option>Récupération commande</option>
+                    <option>Prise commande</option>
+                    <option>Demande de prix et infos</option>
+                    <option>Visite avec clients particuliers</option>
+                    <option>Visite agence/équipe</option>
+                    <option>Promo courrier</option>
+                    <option>Promo email</option>
                 </select>
             </div>
         </div>
 
     </main>
 
+
     <footer>
-        <!-- Enviar -->
         <div class="area-send">
-            <input type="button" class="boton-box" value="envoyer" id="enviar">
+            <input type="button" class="boton-box btn-enviar" value="envoyer" id="enviar">
         </div>
+        <!--
         <div class="aviso-legal">
             CUPA STONE NANTES 2015 ® TOUS DROITS RÉSERVÉS
         </div>
+        -->
     </footer>
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
 </body>
 </html>

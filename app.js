@@ -1,66 +1,69 @@
 'use strict';
+
+var boton = [];
+boton[0]= { active: true, click: false, value: "" };
+boton[1]= { active: true, click: false, value: "" };
+boton[2]= { active: false, click: false, value: "" };
+boton[3]= { active: false, click: false, value: "" };
+boton[4]= { active: false, click: false, value: "" };
+boton[5]= { active: false, click: false, value: "" };
+
+
 $(window).load(function () {
-
-    var boton1 = true;
-    var boton2 = true;
-    var boton3 = false;
-    var boton4 = false;
     actualizar();
-
 
     $('.btn-select').on('click', function() {
         var check = $(this);
 
-        check.addClass('boton-box-active');
-
         if (check.attr('id') == 'boton1' || check.attr('id') == 'boton2') {
-            boton3 = true;
-            boton4 = true;
+            boton[2].active = true;
+            boton[3].active = true;
+            if (check.attr('id') == 'boton1') {
+                boton[0].click = true;
+                boton[1].click = false;
+            } else {
+                boton[0].click = false;
+                boton[1].click = true;
+            }
+        } else if (check.attr('id') == 'boton3' || check.attr('id') == 'boton4') {
+            if (check.attr('id') == 'boton3') {
+                boton[2].click = true;
+                boton[4].active = true;
+                boton[3].click = false;
+                boton[5].active = false;
+            } else {
+                boton[2].click = false;
+                boton[4].active = false;
+                boton[3].click = true;
+                boton[5].active = true;
+            }
         }
-        actualizar();
+        actualizar()
     })
-
-
-
 
 
     $('#enviar').click(function () {
 
         $(undefined).attr('disabled', 'disabled');
         boton3 = false;
-
         actualizar();
-    });
-
-
-
-
-
-
-
-    function actualizar() {
-        if (boton1) {
-            $('#boton1').removeAttr('disabled');
-        } else {
-            $('#boton1').attr('disabled', 'disabled');
-        }
-        if (boton2) {
-            $('#boton2').removeAttr('disabled');
-        } else {
-            $('#boton2').attr('disabled', 'disabled');
-        }
-        if (boton3) {
-            $('#boton3').removeAttr('disabled');
-        } else {
-            $('#boton3').attr('disabled', 'disabled');
-        }
-        if (boton4) {
-            $('#boton4').removeAttr('disabled');
-        } else {
-            $('#boton4').attr('disabled', 'disabled');
-        }
-    };
-
-
+    })
 
 });
+
+function actualizar() {
+    var n = 1
+    for (var i of boton) {
+        if (i.active) {
+            $('#boton' + n).removeAttr('disabled');
+        } else {
+            $('#boton' + n).attr('disabled', 'disabled');
+        };
+        if (i.click) {
+            $('#boton' + n).addClass('boton-box-click');
+        } else {
+            $('#boton' + n).removeClass('boton-box-click');
+        };
+        n++;
+    };
+};
