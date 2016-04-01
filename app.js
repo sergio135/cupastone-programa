@@ -70,11 +70,7 @@ $(window).load(function () {
                 temp = temp.concat(i.value);
                 }
             }
-
             result = { agencia: agencia, opcion1: temp[0], opcion2:  temp[1], lista: temp[2] };
-
-
-
             $.ajax({
                 method: "POST",
                 url: urlSent,
@@ -86,9 +82,6 @@ $(window).load(function () {
             .fail(function() {
                 alert( "error" );
             });
-
-
-
         } else {
             alert('No has selecionado todos los campos');
         }
