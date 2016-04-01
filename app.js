@@ -1,6 +1,14 @@
 'use strict';
 var result;
+
+// -------------------------------------------------------------- //
+// Las variables para cambiar importantes:
+//"agencia" es la que determina a que agencia pertenece
+//"url" es la direccion de la api donde envia los datos.
 var agencia = 'Nantes';
+var urlSent = 'http://localhost:3000/api/create';
+// -------------------------------------------------------------- //
+
 var boton = [];
 boton[0]= { active: true, click: false, value: "pro" };
 boton[1]= { active: true, click: false, value: "partculier" };
@@ -62,9 +70,25 @@ $(window).load(function () {
                 temp = temp.concat(i.value);
                 }
             }
-            result = [agencia, temp];
-            alert(result);
-            location.reload();
+
+            result = { agencia: agencia, opcion1: temp[0], opcion2:  temp[1], lista: temp[2] };
+
+
+
+            $.ajax({
+                method: "POST",
+                url: urlSent,
+                data: result
+            })
+            .done(function( msg ) {
+                location.reload();
+            })
+            .fail(function() {
+                alert( "error" );
+            });
+
+
+
         } else {
             alert('No has selecionado todos los campos');
         }
