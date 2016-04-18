@@ -9,10 +9,11 @@ const BrowserWindow = electron.BrowserWindow;
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let ventana;
+const appIcon = './icon.ico'
 
 function createWindow () {
   // Create the browser window.
-  ventana = new BrowserWindow({width: 450, height: 600});
+  ventana = new BrowserWindow({width: 450, height: 600, minWidth: 350, minHeight: 500, icon: appIcon});
 
   // and load the index.html of the app.
   ventana.loadURL('file://' + __dirname + '/index.html');

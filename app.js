@@ -6,7 +6,7 @@ var result;
 //"agencia" es la que determina a que agencia pertenece
 //"url" es la direccion de la api donde envia los datos.
 var agencia = 'Nantes';
-var urlSent = 'http://localhost:3000/api/create';
+var urlSent = 'http://91.116.142.166:3000/api/create';
 // -------------------------------------------------------------- //
 
 var boton = [];
@@ -80,7 +80,7 @@ $(window).load(function () {
                 location.reload();
             })
             .fail(function() {
-                alert( "error" );
+                alert( "error, no se ha podido conectar con la base de datos" );
             });
         } else {
             alert('No has selecionado todos los campos');
