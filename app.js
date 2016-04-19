@@ -6,7 +6,7 @@ var result;
 //"agencia" es la que determina a que agencia pertenece
 //"url" es la direccion de la api donde envia los datos.
 var agencia = 'Nantes';
-var urlSent = 'http://91.116.142.166:3000/api/create';
+var urlSent = 'http://91.116.142.166:3000/api/';
 // -------------------------------------------------------------- //
 
 var boton = [];
