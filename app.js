@@ -80,10 +80,10 @@ $(window).load(function () {
                 location.reload();
             })
             .fail(function() {
-                alert( "error, no se ha podido conectar con la base de datos" );
+                alert("erreur, impossible de se connecter à la base de données");
             });
         } else {
-            alert('No has selecionado todos los campos');
+            alert("vous n’avez pas sélectionné tous les champs");
         }
     })
 
@@ -96,12 +96,22 @@ function actualizar() {
             $('#boton' + n).removeAttr('disabled');
         } else {
             $('#boton' + n).attr('disabled', 'disabled');
-        }
+        };
         if (i.click) {
             $('#boton' + n).addClass('boton-box-click');
         } else {
             $('#boton' + n).removeClass('boton-box-click');
-        }
+        };
         n++;
+    }
+    if (boton[4].active) {
+        $('#boton' + 5).removeAttr('style');
+    } else {
+        $('#boton' + 5).attr('style', 'visibility: hidden');
+    }
+    if (boton[5].active) {
+        $('#boton' + 6).removeAttr('style');
+    } else {
+        $('#boton' + 6).attr('style', 'visibility: hidden');
     }
 }
