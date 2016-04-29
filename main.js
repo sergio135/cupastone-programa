@@ -13,7 +13,7 @@ const appIcon = './icon.ico'
 
 function createWindow () {
   // Create the browser window.
-  ventana = new BrowserWindow({width: 450, height: 600, minWidth: 350, minHeight: 500, icon: appIcon});
+  ventana = new BrowserWindow({width: 450, height: 600, minWidth: 350, minHeight: 600, icon: appIcon});
 
   // and load the index.html of the app.
   ventana.loadURL('file://' + __dirname + '/index.html');
