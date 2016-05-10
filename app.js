@@ -5,7 +5,7 @@ var result;
 // Las variables para cambiar importantes:
 //"agencia" es la que determina a que agencia pertenece
 //"url" es la direccion de la api donde envia los datos.
-var agencia = 'nantes';
+var agencia = 'larochesuryon';
 var urlSent = 'http://91.116.142.166:3000/api/';
 // -------------------------------------------------------------- //
 
